@@ -434,7 +434,7 @@ $$
 
 The only equation that contains bias $b$ is the function $f_{\phi}(x) = b + \sum_{i=1}^N \alpha_i y_i k(x_i, x)$. When $0 \lt \alpha_i^* \lt C$, it means that the data point $x_i$ is right on the margin such that $f_{\phi}(x)=y_i$, $f_{\phi}^*(x_i) = y_i$ and the bias $b_1^*, b_2^*$ can be derived directly. Note that for convenience, $f_{\phi}^*(x_w) = \sum_{i=3}^N \alpha_i y_i K_{i, w} + \alpha_1^* y_1 K_{1, w} + \alpha_2^* y_2 K_{2, w} + b^* = y_w$ contains updated variables $\alpha_1^*, \alpha_2^*, b^*$. 
 
-If $0 < \alpha_1^* < C$, the data point $x_1$ should right on the margin and $f_{\phi}^*(x_1) = y_1$. The bias derived from $\alpha_1$.
+According to the **complementary slackness**, if $0 < \alpha_1^* < C$, the data point $x_1$ would be just on the margin and $f_{\phi}^*(x_1) = y_1$. The bias derived from $\alpha_1$.
 
 $$
 b_1^* = y_1 - \sum_{i=3}^N \alpha_i y_i K_{i, 1} - \alpha_1^* y_1 K_{1, 1} - \alpha_2^* y_2 K_{2, 1}
@@ -448,7 +448,7 @@ $$
 = - E_1 - y_1 K_{1, 1} (\alpha_1^* - \alpha_1^{old}) - y_2 K_{2, 1} (\alpha_2^* - \alpha_2^{old}) + b
 $$
 
-If $0 < \alpha_2^* < C$, the data point $x_2$ should right on the margin and $f_{\phi}^*(x_2) = y_2$. The bias derived from $\alpha_2$.
+If $0 < \alpha_2^* < C$, the data point $x_2$ should be on the margin and $f_{\phi}^*(x_2) = y_2$. The bias derived from $\alpha_2$.
 
 $$
 b_2^* = y_2 - \sum_{i=3}^N \alpha_i y_i K_{i, 2} - \alpha_1^* y_1 K_{1, 2} - \alpha_2^* y_2 K_{2, 2}
